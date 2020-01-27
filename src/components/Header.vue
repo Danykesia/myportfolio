@@ -1,5 +1,6 @@
 <template>
   <header>
+    <HeadingText/>
   </header>
 </template>
 
@@ -10,3 +11,14 @@ header {
   width: 100%;
 }
 </style>
+
+<script>
+import HeadingText from '@/components/HeadingText.vue';
+
+export default {
+  name: 'home',
+  components: {
+    HeadingText,
+  },
+};
+</script>
