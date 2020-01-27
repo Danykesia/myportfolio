@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
 * {
