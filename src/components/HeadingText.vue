@@ -2,7 +2,6 @@
   <div class="container">
     <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
     <Me/>
-    <h2>Olá, eu sou Daniele Késia!</h2>
     <p>
       Sou <span class="bold">Web Designer</span> e
       <span class="bold">Desenvolvedora Web</span> (front-end).
@@ -40,25 +39,17 @@ h1 {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 500;
-  padding-top: 60px;
-}
-
-h2 {
-  font-weight: 500;
-  margin-top: -105px;
-  margin-left: 150px;
-  font-size: 1.2rem;
-  color: #f3ecec;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 1.8rem;
+  padding-top: 3.75rem;
 }
 
 p {
-  margin-top: 7px;
   color: #f3ecec;
+  margin-top: .5rem;
 
   &:first-of-type {
-    padding-top: 65px;
+    padding-top: 7rem;
   }
 }
 
