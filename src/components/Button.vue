@@ -8,7 +8,7 @@
 button {
   border: 2px solid pink;
   height: 2.5rem;
-  width: 10rem;
+  width: 12rem;
   text-align: center;
   background: transparent;
   margin-top: 1rem;
@@ -18,7 +18,7 @@ button {
 
 a {
   color: #fff;
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 </style>
