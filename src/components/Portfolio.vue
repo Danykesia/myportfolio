@@ -8,15 +8,15 @@
       <Mobile :picture="require('../assets/imobMobile.png')"/>
     </div>
     <div class="portfolio-card">
+      <LapTop :picture="require('../assets/lawyerLaptop.png')"/>
+      <Mobile :picture="require('../assets/workoutMobile.png')"/>
+    </div>
+    <div class="portfolio-card">
       <LapTop :picture="require('../assets/motionLaptop.png')"/>
       <Mobile :picture="require('../assets/motionMobile.png')"/>
     </div>
     <div class="portfolio-card">
       <LapTop :picture="require('../assets/workoutLaptop.png')"/>
-      <Mobile :picture="require('../assets/workoutMobile.png')"/>
-    </div>
-    <div class="portfolio-card">
-      <LapTop :picture="require('../assets/lawyerLaptop.png')"/>
       <Mobile :picture="require('../assets/workoutMobile.png')"/>
     </div>
   </section>
@@ -44,6 +44,7 @@ hr {
   border-color: #8f49e0;
   border-width: .03rem;
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 #portfolio {
   margin-top: 1rem;
