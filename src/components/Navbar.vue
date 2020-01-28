@@ -14,6 +14,20 @@
   </nav>
 </template>
 
+<script>
+export default {
+  mounted() {
+    window.onscroll = function scrollFunction() {
+      if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+        document.getElementById('navbar').style.background = '#5e2a634b';
+      } else {
+        document.getElementById('navbar').style.background = 'transparent';
+      }
+    };
+  },
+};
+</script>
+
 <style lang="scss" scoped>
   nav {
     display: flex;
@@ -21,6 +35,7 @@
     align-content: center;
     padding-top: 1rem;
     position: fixed;
+    height: 60px;
   }
 
   img {
