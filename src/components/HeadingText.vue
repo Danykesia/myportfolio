@@ -3,7 +3,7 @@
     <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
     <Me/>
     <p>
-      Sou <span class="bold">Web Designer</span> e
+      Trabalho como <span class="bold">Web Designer</span> e
       <span class="bold">Desenvolvedora Web</span> (front-end).
     </p>
     <p>
