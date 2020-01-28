@@ -37,7 +37,7 @@ h1 {
   background: -webkit-linear-gradient(to right, #f4b3c4, #f4b3c4, #ffffff, #ffffff);
   background: linear-gradient(to right, #f4b3c4, #f4b3c4, #ffffff, #ffffff);
 
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   font-size: 1.8rem;
