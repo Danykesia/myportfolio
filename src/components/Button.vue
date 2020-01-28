@@ -7,11 +7,12 @@
 <style lang="scss" scoped>
 button {
   border: 2px solid pink;
-  height: 40px;
-  width: 160px;
+  height: 2.5rem;
+  width: 10rem;
   text-align: center;
   background: transparent;
-  margin-top: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   box-shadow: 4px 5px 13px 0px #080839;
 }
 
