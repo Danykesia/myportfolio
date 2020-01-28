@@ -24,8 +24,8 @@
   }
 
   img {
-    height: 30px;
-    width: 130px;
+    height: 1.87rem;
+    width: 8.12rem;
   }
 
   #btn {
