@@ -11,8 +11,8 @@ button {
   width: 12rem;
   text-align: center;
   background: transparent;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
   box-shadow: 4px 5px 13px 0px #080839;
 }
 
