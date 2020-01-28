@@ -7,7 +7,7 @@
 
 <style lang="scss" scoped>
 header {
-  background: linear-gradient(to left top,#9f56f7, #ad89fa, #b7a0f9);
+  background: linear-gradient(to left top,#0b0216, #6017fb, #6b657a);
   border: 3px solid #ffffff;
   height: 100vh;
   width: 100%;
