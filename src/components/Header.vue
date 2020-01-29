@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 header {
   background: linear-gradient(to left top,#0b0216, #6017fb, #6b657a);
-  border: 3px solid #ffffff;
+  border: 10px solid #ffffff;
   height: 100%;
   width: 100%;
 }
