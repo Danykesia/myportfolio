@@ -62,7 +62,6 @@ export default {
             &_links li a {
               margin: 0 1rem;
               color: white;
-              font-size: 1.2rem;
               transition: all 0.3s ease 0s;
               font-weight: bold;
 
