@@ -19,7 +19,7 @@
 
           .perfilDesktop {
             display: inline-block;
-            margin-top: 4rem;
+            margin-top: 6rem;
           }
         }
 </style>
