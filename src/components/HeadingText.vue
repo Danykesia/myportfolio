@@ -4,9 +4,10 @@
       <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
       <MeDesktop/>
     </div>
+    <h3 class="desktop">Olá, meu nome é Daniele Késia!</h3>
     <MeMobile/>
     <p>
-      Trabalho como <span class="bold">Web Designer</span> e
+      Sou <span class="bold">Web Designer</span> e
       <span class="bold">Desenvolvedora Web</span> (front-end).
     </p>
     <p>
@@ -97,6 +98,18 @@ p {
         }
 
         @media (min-width: 992px) {
+          h3 {
+            margin-top: -2rem;
+            margin-bottom: 4rem;
+            font-size: 1.6rem;
+            color: #f3ecec;
+          }
+
+          p {
+            &:first-of-type {
+              padding-top: 1rem;
+            }
+          }
           .desktop {
             display: flex;
             justify-content: space-between;

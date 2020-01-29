@@ -13,8 +13,8 @@
 
         @media (min-width: 992px) {
           img {
-            width: 11rem;
-            height: 13rem;
+            width: 10rem;
+            height: 12rem;
           }
 
           .perfilDesktop {

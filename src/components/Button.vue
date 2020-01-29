@@ -38,10 +38,16 @@ a {
           }
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 768px) and (min-width: 991px) {
           button {
             margin-top: 3rem;
             margin-bottom: 3rem;
+          }
+        }
+
+        @media (min-width: 992px) {
+          button {
+            margin-top: 6rem;
           }
         }
 </style>
