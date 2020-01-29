@@ -31,4 +31,11 @@ export default {
             height: 16rem;
           }
         }
+
+        @media (min-width: 768px) and (max-width: 991px){
+          .laptop {
+            width: 20rem;
+            height: 13rem;
+          }
+        }
 </style>
