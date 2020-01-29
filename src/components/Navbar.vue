@@ -36,6 +36,10 @@ export default {
     padding-top: 1rem;
     position: fixed;
     height: 60px;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    right: 0;
 
     &_logo {
       height: 1.87rem;
