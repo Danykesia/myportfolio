@@ -98,9 +98,12 @@ p {
         }
 
         @media (min-width: 992px) {
+          h1 {
+            margin-top: 4rem;
+          }
+
           h3 {
-            margin-top: -2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             font-size: 1.6rem;
             color: #f3ecec;
           }
