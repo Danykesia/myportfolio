@@ -16,6 +16,7 @@ button {
   box-shadow: 4px 5px 13px 0px #080839;
   cursor: pointer;
   border-radius: 4px;
+  transition: all 2s ease 0s;
 
   &:hover {
     background: transparent;
