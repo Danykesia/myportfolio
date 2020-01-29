@@ -6,20 +6,26 @@
 
 <style lang="scss" scoped>
 button {
-  border: 2px solid pink;
+  border: none;
   height: 2.5rem;
   width: 12rem;
   text-align: center;
-  background: transparent;
+  background: rgb(217, 139, 253);
   margin-top: 1.5rem;
   margin-bottom: 2rem;
   box-shadow: 4px 5px 13px 0px #080839;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background: transparent;
+    border:  2px solid pink;
+  }
 }
 
 a {
   color: #fff;
   font-size: 1rem;
-  // font-weight: bold;
 }
 
 .button-wrapper {
