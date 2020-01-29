@@ -56,6 +56,13 @@ hr {
   position: relative;
   display: flex;
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
+
+        @media (min-width: 576px) {
+          .portfolio-card {
+            width: 25rem;
+            height: 16rem;
+          }
+        }
 </style>

@@ -24,4 +24,11 @@ export default {
     justify-content: center;
   }
 }
+
+        @media (min-width: 576px) {
+          .laptop {
+            width: 25rem;
+            height: 16rem;
+          }
+        }
 </style>

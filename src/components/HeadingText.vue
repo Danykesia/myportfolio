@@ -1,7 +1,10 @@
 <template>
-  <div class="container">
-    <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
-    <Me/>
+  <div class="perfilDesktop container">
+    <div class="desktop mobile">
+      <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
+      <MeDesktop/>
+    </div>
+    <MeMobile/>
     <p>
       Trabalho como <span class="bold">Web Designer</span> e
       <span class="bold">Desenvolvedora Web</span> (front-end).
@@ -20,12 +23,14 @@
 </template>
 
 <script>
-import Me from '@/components/Me.vue';
+import MeMobile from '@/components/MeMobile.vue';
+import MeDesktop from '@/components/MeDesktop.vue';
 
 export default {
   name: 'home',
   components: {
-    Me,
+    MeMobile,
+    MeDesktop,
   },
 };
 </script>
@@ -47,13 +52,54 @@ h1 {
 p {
   color: #f3ecec;
   margin-top: .5rem;
+  font-size: 1rem;
 
   &:first-of-type {
     padding-top: 7rem;
   }
 }
 
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
 .bold {
   font-weight: bold;
 }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          h1 {
+            font-size: 2.2rem;
+          }
+          p {
+            &:first-of-type {
+              padding-top: 7.5rem;
+            }
+          }
+        }
+
+        @media (min-width: 768px) and (min-width: 991px){
+          h1 {
+            font-size: 3rem;
+          }
+          p {
+            font-size: 1.2rem;
+            margin-top: .7rem;
+
+            &:first-of-type {
+              padding-top: 8rem;
+            }
+          }
+        }
+
+        @media (min-width: 992px) {
+          .desktop {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
 </style>

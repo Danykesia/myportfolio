@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container button-wrapper">
     <button><a href="#portfolio">Veja meus trabalhos</a></button>
   </div>
 </template>
@@ -19,6 +19,29 @@ button {
 a {
   color: #fff;
   font-size: 1rem;
-  font-weight: bold;
+  // font-weight: bold;
 }
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+        @media (min-width: 576px) {
+          button {
+            height: 2.8rem;
+            width: 14rem;
+          }
+
+          a {
+            font-size: 1.2rem;
+          }
+        }
+
+        @media (min-width: 768px) {
+          button {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+          }
+        }
 </style>
