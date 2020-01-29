@@ -53,7 +53,7 @@ a {
 
         @media (min-width: 992px) {
           button {
-            margin-top: 6rem;
+            margin-top: 5rem;
           }
         }
 </style>
