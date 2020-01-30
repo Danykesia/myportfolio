@@ -1,6 +1,6 @@
 <template>
   <div class="perfil">
-    <div class="perfilMobile">
+    <div class="perfil_Mobile">
       <img src="../assets/avatar.png" alt="Minha foto">
       <h2>Olá, eu sou Daniele Késia!</h2>
     </div>
@@ -22,32 +22,32 @@ img {
   height: 9rem;
 }
 
-.perfilMobile {
+.perfil_Mobile {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
 }
 
-        @media (min-width: 576px) {
-          img {
-            width: 11rem;
-            height: 12.5rem;
-          }
+@media (min-width: 576px) {
+  img {
+    width: 11rem;
+    height: 12.5rem;
+  }
 
-          h2{
-            font-size: 1.5rem;
-            margin-right: 3rem;
-            padding-left: 3rem;
-          }
+  h2{
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    padding-left: 3rem;
+  }
 
-          .perfilMobile {
-            padding-top: 2rem;
-          }
-        }
+  .perfil_Mobile {
+    padding-top: 2rem;
+  }
+}
 
-        @media (min-width: 992px) {
-          .perfilMobile {
-            display: none;
-          }
-        }
+@media (min-width: 992px) {
+  .perfil_Mobile {
+    display: none;
+  }
+}
 </style>

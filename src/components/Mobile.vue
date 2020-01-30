@@ -1,5 +1,5 @@
 <template>
-  <div class="mobile-card">
+  <div class="mobile_card">
     <img class="mobile" :src="picture">
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   margin-right: .5rem;
   margin-bottom: .8rem;
 
-  &-card {
+  &_card {
     position: absolute;
     right: 0;
     bottom: 0;

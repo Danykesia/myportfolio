@@ -1,5 +1,5 @@
 <template>
-  <div class="laptop-card">
+  <div class="laptop_card">
     <img class="laptop" :src="picture">
   </div>
 </template>
@@ -18,24 +18,24 @@ export default {
   height: 11rem;
   margin-bottom: 3rem;
 
-  &-card {
+  &_card {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 }
 
-        @media (min-width: 576px) {
-          .laptop {
-            width: 25rem;
-            height: 16rem;
-          }
-        }
+@media (min-width: 576px) {
+  .laptop {
+    width: 25rem;
+    height: 16rem;
+  }
+}
 
-        @media (min-width: 768px) and (max-width: 991px){
-          .laptop {
-            width: 20rem;
-            height: 13rem;
-          }
-        }
+@media (min-width: 768px) and (max-width: 991px){
+  .laptop {
+    width: 20rem;
+    height: 13rem;
+  }
+}
 </style>

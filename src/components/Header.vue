@@ -21,14 +21,14 @@ export default {
 <style lang="scss" scoped>
 header {
   background: linear-gradient(to left top,#0b0216, #6017fb, #6b657a);
-  border: 10px solid #ffffff;
+  border: 3px solid #ffffff;
   height: 100%;
   width: 100%;
 }
 
-        @media (min-width: 992px) {
-          header {
-            height: 100vh;
-          }
-        }
+@media (min-width: 992px) {
+  header {
+    height: 100vh;
+  }
+}
 </style>

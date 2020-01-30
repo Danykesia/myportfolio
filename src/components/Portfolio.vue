@@ -4,19 +4,19 @@
 
     <hr>
     <div class="portfolio">
-      <div class="portfolio-card">
+      <div class="portfolio_card">
         <LapTop :picture="require('../assets/imobLaptop.png')"/>
         <Mobile :picture="require('../assets/imobMobile.png')"/>
       </div>
-      <div class="portfolio-card">
+      <div class="portfolio_card">
         <LapTop :picture="require('../assets/lawyerLaptop.png')"/>
         <Mobile :picture="require('../assets/workoutMobile.png')"/>
       </div>
-      <div class="portfolio-card">
+      <div class="portfolio_card">
         <LapTop :picture="require('../assets/motionLaptop.png')"/>
         <Mobile :picture="require('../assets/motionMobile.png')"/>
       </div>
-      <div class="portfolio-card">
+      <div class="portfolio_card">
         <LapTop :picture="require('../assets/workoutLaptop.png')"/>
         <Mobile :picture="require('../assets/workoutMobile.png')"/>
       </div>
@@ -53,7 +53,7 @@ hr {
   margin-top: 1rem;
 }
 
-.portfolio-card {
+.portfolio_card {
   width: 18rem;
   height: 11rem;
   position: relative;
@@ -62,36 +62,36 @@ hr {
   margin-bottom: 3rem;
 }
 
-        @media (min-width: 576px) and (max-width: 767px) {
-          .portfolio-card {
-            width: 25rem;
-            height: 16rem;
-          }
-        }
+@media (min-width: 576px) and (max-width: 767px) {
+  .portfolio_card {
+    width: 25rem;
+    height: 16rem;
+  }
+}
 
-        @media (min-width: 768px) and (max-width: 991px) {
-          .portfolio-card {
-            width: 20rem;
-            height: 13rem;
-          }
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-          .portfolio {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-          }
-        }
+    &_card {
+    width: 20rem;
+    height: 13rem;
+    }
+  }
+}
 
-        @media (min-width: 992px) {
-          .portfolio-card {
-            width: 25rem;
-            height: 16rem;
-          }
+@media (min-width: 992px) {
+  .portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-          .portfolio {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-          }
-        }
+    &_card {
+      width: 25rem;
+      height: 16rem;
+    }
+  }
+}
 </style>

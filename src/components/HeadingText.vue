@@ -1,5 +1,5 @@
 <template>
-  <div class="perfilDesktop container">
+  <div class="desktop_perfil container">
     <div class="desktop mobile">
       <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
       <MeDesktop/>
@@ -47,7 +47,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   font-size: 1.8rem;
-  padding-top: 3.75rem;
+  padding-top: 5rem;
 }
 
 p {
@@ -72,50 +72,50 @@ p {
   font-weight: bold;
 }
 
-        @media (min-width: 576px) and (max-width: 767.98px) {
-          h1 {
-            font-size: 2.2rem;
-          }
-          p {
-            &:first-of-type {
-              padding-top: 7.5rem;
-            }
-          }
-        }
+@media (min-width: 576px) and (max-width: 767.98px) {
+h1 {
+  font-size: 2.2rem;
+}
+p {
+  &:first-of-type {
+    padding-top: 7.5rem;
+  }
+}
+}
 
-        @media (min-width: 768px) and (min-width: 991px){
-          h1 {
-            font-size: 3rem;
-          }
-          p {
-            font-size: 1.2rem;
-            margin-top: .7rem;
+@media (min-width: 768px) and (min-width: 991px){
+h1 {
+  font-size: 3rem;
+}
+p {
+  font-size: 1.2rem;
+  margin-top: .7rem;
 
-            &:first-of-type {
-              padding-top: 8rem;
-            }
-          }
-        }
+  &:first-of-type {
+    padding-top: 8rem;
+  }
+}
+}
 
-        @media (min-width: 992px) {
-          h1 {
-            margin-top: 4rem;
-          }
+@media (min-width: 992px) {
+h1 {
+  margin-top: 4rem;
+}
 
-          h3 {
-            margin-bottom: 3rem;
-            font-size: 1.6rem;
-            color: #f3ecec;
-          }
+h3 {
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  color: #f3ecec;
+}
 
-          p {
-            &:first-of-type {
-              padding-top: 1rem;
-            }
-          }
-          .desktop {
-            display: flex;
-            justify-content: space-between;
-          }
-        }
+p {
+  &:first-of-type {
+    padding-top: 1rem;
+  }
+}
+.desktop {
+  display: flex;
+  justify-content: space-between;
+}
+}
 </style>
