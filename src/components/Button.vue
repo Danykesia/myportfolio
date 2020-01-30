@@ -1,5 +1,5 @@
 <template>
-  <div class="container button-wrapper">
+  <div class="container button_wrapper">
     <button><a href="#portfolio">Veja meus trabalhos</a></button>
   </div>
 </template>
@@ -16,7 +16,7 @@ button {
   box-shadow: 4px 5px 13px 0px #080839;
   cursor: pointer;
   border-radius: 4px;
-  transition: all 2s ease 0s;
+
 
   &:hover {
     background: transparent;
@@ -29,32 +29,33 @@ a {
   font-size: 1rem;
 }
 
-.button-wrapper {
+.button_wrapper {
   display: flex;
   justify-content: center;
 }
 
-        @media (min-width: 576px) {
-          button {
-            height: 2.8rem;
-            width: 14rem;
-          }
+@media (min-width: 576px) {
+  button {
+    height: 2.8rem;
+    width: 14rem;
+  }
 
-          a {
-            font-size: 1.2rem;
-          }
-        }
+  a {
+    font-size: 1.2rem;
+  }
+}
 
-        @media (min-width: 768px) and (min-width: 991px) {
-          button {
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-          }
-        }
+@media (min-width: 768px) and (min-width: 991px) {
+  button {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 
-        @media (min-width: 992px) {
-          button {
-            margin-top: 5rem;
-          }
-        }
+@media (min-width: 992px) {
+  button {
+    margin-top: 5rem;
+    transition: 1s ease 0s;
+  }
+}
 </style>
