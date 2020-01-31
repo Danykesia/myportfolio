@@ -55,7 +55,11 @@ a {
 @media (min-width: 992px) {
   button {
     margin-top: 5rem;
-    transition: 1s ease 0s;
+    transition: all.2s;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
   }
 }
 </style>
