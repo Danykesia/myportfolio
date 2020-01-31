@@ -10,7 +10,7 @@
       </div>
       <div class="portfolio_card">
         <LapTop :picture="require('../assets/lawyerLaptop.png')"/>
-        <Mobile :picture="require('../assets/workoutMobile.png')"/>
+        <Mobile :picture="require('../assets/lawyerMobile.png')"/>
       </div>
       <div class="portfolio_card">
         <LapTop :picture="require('../assets/motionLaptop.png')"/>
@@ -19,6 +19,10 @@
       <div class="portfolio_card">
         <LapTop :picture="require('../assets/workoutLaptop.png')"/>
         <Mobile :picture="require('../assets/workoutMobile.png')"/>
+      </div>
+      <div class="portfolio_card">
+        <LapTop :picture="require('../assets/portfolioLaptop.png')"/>
+        <Mobile :picture="require('../assets/portfolioMobile.png')"/>
       </div>
     </div>
   </section>
@@ -50,7 +54,10 @@ hr {
 }
 
 #portfolio {
-  margin-top: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+  background: white;
+  max-width: 100%;
 }
 
 .portfolio_card {
