@@ -24,6 +24,7 @@ import {
   faFacebook,
   faTwitter,
   faWhatsapp,
+  faGithub,
 }
   from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -39,7 +40,7 @@ Vue.use(VModal);
 library.add(faSearch, faChevronRight, faHouseDamage, faInstagram,
   faFacebook, faTwitter, faHome, faWarehouse, faBalanceScale,
   faArrowRight, faBriefcase, faGavel, faCube, faWhatsapp, faAddressCard,
-  faCalculator, faBars, faSearchPlus, faWindowClose, faEye, faCode);
+  faCalculator, faBars, faSearchPlus, faWindowClose, faEye, faCode, faGithub);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
