@@ -29,6 +29,7 @@ import {
   from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
+import Vuelidate from 'vuelidate';
 import VModal from 'vue-js-modal';
 import App from './App.vue';
 import './registerServiceWorker';
@@ -36,6 +37,7 @@ import router from './router';
 import store from './store';
 
 Vue.use(VModal);
+Vue.use(Vuelidate);
 
 library.add(faSearch, faChevronRight, faHouseDamage, faInstagram,
   faFacebook, faTwitter, faHome, faWarehouse, faBalanceScale,

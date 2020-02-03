@@ -58,11 +58,13 @@
 
     <Modal
       :show="showModal"
-      :lapTopImgSrc="lapTopImgSrc"
-      :mobileImgSrc="mobileImgSrc"
-      @close="closeModal()"
-      :linkCode="linkCode"
-      :linkDemo="linkDemo"/>
+      @close="closeModal()">
+      <PortfolioModalContent
+        :lapTopImgSrc="lapTopImgSrc"
+        :mobileImgSrc="mobileImgSrc"
+        :linkCode="linkCode"
+        :linkDemo="linkDemo"/>
+    </Modal>
   </section>
 </template>
 
@@ -70,12 +72,14 @@
 import PortfolioCard from '@/components/PortfolioCard.vue';
 import PopUp from '@/components/PopUp.vue';
 import Modal from '@/components/Modal.vue';
+import PortfolioModalContent from '@/components/PortfolioModalContent.vue';
 
 export default {
   components: {
     PortfolioCard,
     PopUp,
     Modal,
+    PortfolioModalContent,
   },
   data() {
     return {
