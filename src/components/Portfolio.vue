@@ -3,39 +3,96 @@
     <h3>Portfolio</h3>
 
     <hr>
-    <div class="portfolio">
-      <div class="portfolio_card">
-        <LapTop :picture="require('../assets/imobLaptop.png')"/>
-        <Mobile :picture="require('../assets/imobMobile.png')"/>
-      </div>
-      <div class="portfolio_card">
-        <LapTop :picture="require('../assets/lawyerLaptop.png')"/>
-        <Mobile :picture="require('../assets/lawyerMobile.png')"/>
-      </div>
-      <div class="portfolio_card">
-        <LapTop :picture="require('../assets/motionLaptop.png')"/>
-        <Mobile :picture="require('../assets/motionMobile.png')"/>
-      </div>
-      <div class="portfolio_card">
-        <LapTop :picture="require('../assets/workoutLaptop.png')"/>
-        <Mobile :picture="require('../assets/workoutMobile.png')"/>
-      </div>
-      <div class="portfolio_card">
-        <LapTop :picture="require('../assets/portfolioLaptop.png')"/>
-        <Mobile :picture="require('../assets/portfolioMobile.png')"/>
-      </div>
+    <div id="card" class="portfolio">
+      <PortfolioCard
+        :lapTopImgSrc="require('../assets/imobLaptop.png')"
+        :mobileImgSrc="require('../assets/imobMobile.png')">
+        <PopUp @click="displayModal(
+          require('../assets/imobLaptop.png'),
+          require('../assets/imobMobile.png'),
+          'https://github.com/Danykesia/imobiliaria-project',
+          'https://www.danykalmeida.com/imobiProject',
+        )"/>
+      </PortfolioCard>
+      <PortfolioCard
+        :lapTopImgSrc="require('../assets/lawyerLaptop.png')"
+        :mobileImgSrc="require('../assets/lawyerMobile.png')">
+        <PopUp @click="displayModal(
+          require('../assets/lawyerLaptop.png'),
+          require('../assets/lawyerMobile.png'),
+          'https://github.com/Danykesia/advocacia-project',
+          'https://danykalmeida.com/advProject',
+        )"/>
+      </PortfolioCard>
+      <PortfolioCard
+        :lapTopImgSrc="require('../assets/motionLaptop.png')"
+        :mobileImgSrc="require('../assets/motionMobile.png')">
+        <PopUp @click="displayModal(
+          require('../assets/motionLaptop.png'),
+          require('../assets/motionMobile.png'),
+        )"/>
+      </PortfolioCard>
+      <PortfolioCard
+        :lapTopImgSrc="require('../assets/workoutLaptop.png')"
+        :mobileImgSrc="require('../assets/workoutMobile.png')">
+        <PopUp @click="displayModal(
+          require('../assets/workoutLaptop.png'),
+          require('../assets/workoutMobile.png'),
+        )"/>
+      </PortfolioCard>
+      <PortfolioCard
+        :lapTopImgSrc="require('../assets/portfolioLaptop.png')"
+        :mobileImgSrc="require('../assets/portfolioMobile.png')">
+        <PopUp @click="displayModal(
+          require('../assets/portfolioLaptop.png'),
+          require('../assets/portfolioMobile.png'),
+          'https://github.com/Danykesia/myportfolio',
+          'https://www.danykalmeida.com/myPortfolio',
+        )"/>
+      </PortfolioCard>
     </div>
+
+    <Modal
+      :show="showModal"
+      :lapTopImgSrc="lapTopImgSrc"
+      :mobileImgSrc="mobileImgSrc"
+      @close="closeModal()"
+      :linkCode="linkCode"
+      :linkDemo="linkDemo"/>
   </section>
 </template>
 
 <script>
-import LapTop from '@/components/LapTop.vue';
-import Mobile from '@/components/Mobile.vue';
+import PortfolioCard from '@/components/PortfolioCard.vue';
+import PopUp from '@/components/PopUp.vue';
+import Modal from '@/components/Modal.vue';
 
 export default {
   components: {
-    LapTop,
-    Mobile,
+    PortfolioCard,
+    PopUp,
+    Modal,
+  },
+  data() {
+    return {
+      showModal: false,
+      lapTopImgSrc: '',
+      mobileImgSrc: '',
+    };
+  },
+  methods: {
+    displayModal(lapTopImgSrc, mobileImgSrc, linkCode, linkDemo) {
+      document.querySelector('body').style.overflow = 'hidden';
+      this.showModal = true;
+      this.lapTopImgSrc = lapTopImgSrc;
+      this.mobileImgSrc = mobileImgSrc;
+      this.linkCode = linkCode;
+      this.linkDemo = linkDemo;
+    },
+    closeModal() {
+      document.querySelector('body').style.overflow = 'auto';
+      this.showModal = false;
+    },
   },
 };
 </script>
@@ -60,32 +117,11 @@ hr {
   max-width: 100%;
 }
 
-.portfolio_card {
-  width: 18rem;
-  height: 11rem;
-  position: relative;
-  display: flex;
-  margin: auto;
-  margin-bottom: 3rem;
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-  .portfolio_card {
-    width: 25rem;
-    height: 16rem;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
   .portfolio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    &_card {
-    width: 20rem;
-    height: 13rem;
-    }
   }
 }
 
@@ -94,11 +130,6 @@ hr {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    &_card {
-      width: 25rem;
-      height: 16rem;
-    }
   }
 }
 </style>
