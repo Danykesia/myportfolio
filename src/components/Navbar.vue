@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     viewportOffset() {
-      return 200;
+      return 300;
     },
   },
   watch: {
