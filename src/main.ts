@@ -13,6 +13,10 @@ import {
   faAddressCard,
   faCalculator,
   faBars,
+  faSearchPlus,
+  faWindowClose,
+  faEye,
+  faCode,
 }
   from '@fortawesome/free-solid-svg-icons';
 import {
@@ -24,14 +28,18 @@ import {
   from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
+import VModal from 'vue-js-modal';
 import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
 import store from './store';
 
+Vue.use(VModal);
+
 library.add(faSearch, faChevronRight, faHouseDamage, faInstagram,
   faFacebook, faTwitter, faHome, faWarehouse, faBalanceScale,
-  faArrowRight, faBriefcase, faGavel, faCube, faWhatsapp, faAddressCard, faCalculator, faBars);
+  faArrowRight, faBriefcase, faGavel, faCube, faWhatsapp, faAddressCard,
+  faCalculator, faBars, faSearchPlus, faWindowClose, faEye, faCode);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
