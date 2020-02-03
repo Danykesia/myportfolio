@@ -1,7 +1,7 @@
 <template>
   <nav id="navbar" class="navbar">
     <div class="toggle_mobile">
-      <img href="/" class="navbar_logo" src="../assets/DANIELE..png" alt="DANIELE">
+      <a href="/"><img class="navbar_logo" src="../assets/DANIELE..png" alt="DANIELE"></a>
       <button id="toggle" class="navbar_toggle" @click="showMenu = !showMenu">
         <font-awesome-icon class="navbar_icon" icon="bars"/>
       </button>
