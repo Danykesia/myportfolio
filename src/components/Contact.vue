@@ -1,21 +1,24 @@
 <template>
-  <section id="contato" class=" container contact">
+  <section id="contato" class="container contact">
     <h3>Contato</h3>
     <hr>
     <p>
       Que tal me falar sobre o seu projeto? Será um prazer ajudá-lo(a)!
     </p>
     <Form/>
+    <SecondaryFooter/>
   </section>
 </template>
 
 <script>
 import Form from '@/components/Form.vue';
+import SecondaryFooter from '@/components/SecondaryFooter.vue';
 
 export default {
   name: 'contact',
   components: {
     Form,
+    SecondaryFooter,
   },
 };
 </script>
@@ -37,9 +40,10 @@ p {
   color: white;
 }
 
-.contact {
+#contato {
   background: linear-gradient(to left top,#6b657a,#6017fb,#0b0216);
   width: 100%;
-  padding-top: 1rem;
+  padding: 3rem;
+  max-width: 100%;
 }
 </style>
