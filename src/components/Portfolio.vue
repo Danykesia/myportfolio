@@ -30,6 +30,8 @@
         <PopUp @click="displayModal(
           require('../assets/motionLaptop.png'),
           require('../assets/motionMobile.png'),
+          'https://github.com/Danykesia/motion-project',
+          'https://www.danykalmeida.com/motionProject',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -38,6 +40,8 @@
         <PopUp @click="displayModal(
           require('../assets/workoutLaptop.png'),
           require('../assets/workoutMobile.png'),
+          'https://github.com/Danykesia/workout-project',
+          'https://www.danykalmeida.com/workoutProject',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -78,6 +82,8 @@ export default {
       showModal: false,
       lapTopImgSrc: '',
       mobileImgSrc: '',
+      linkCode: '',
+      linkDemo: '',
     };
   },
   methods: {
