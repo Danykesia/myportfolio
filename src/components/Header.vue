@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="home">
     <HeadingText/>
     <Button/>
   </header>
