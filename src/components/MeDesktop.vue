@@ -14,7 +14,6 @@
 @media (min-width: 992px) {
   img {
     width: 10rem;
-    height: 12rem;
   }
 
   .perfil_Desktop {

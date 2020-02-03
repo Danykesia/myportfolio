@@ -2,7 +2,7 @@
   <div class="perfil">
     <div class="perfil_Mobile">
       <img src="../assets/avatar.png" alt="Minha foto">
-      <h2>Olá, eu sou Daniele Késia!</h2>
+      <h2>Olá, meu nome é Daniele Késia!</h2>
     </div>
   </div>
 </template>
@@ -19,7 +19,6 @@ h2 {
 
 img {
   width: 8rem;
-  height: 9rem;
 }
 
 .perfil_Mobile {
@@ -31,7 +30,6 @@ img {
 @media (min-width: 576px) {
   img {
     width: 11rem;
-    height: 12.5rem;
   }
 
   h2{
