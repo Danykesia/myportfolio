@@ -1,5 +1,5 @@
 <template>
-  <div class="form-wrapper">
+  <div class="form-wrapper container">
     <form action="">
       <div class="name">
         <div class="col-1">
