@@ -3,15 +3,19 @@
     <div class="toggle_mobile">
       <img href="/" class="navbar_logo" src="../assets/DANIELE..png" alt="DANIELE">
       <button id="toggle" class="navbar_toggle" @click="showMenu = !showMenu">
-        <font-awesome-icon icon="bars"/>
+        <font-awesome-icon class="navbar_icon" icon="bars"/>
       </button>
     </div>
 
     <ul class="navbar_links" :class="{'showMenu': showMenu}">
       <li>
-        <a href="#" class="active" exact>Home</a>
-        <a href="#portfolio" active-class="active" exact>Portfolio</a>
-        <a href="#contato" active-class="active" exact>Contato</a>
+        <a href="#home" class="active">Home</a>
+      </li>
+      <li>
+        <a href="#portfolio">Portfolio</a>
+      </li>
+      <li>
+        <a href="#contato">Contato</a>
       </li>
     </ul>
   </nav>
@@ -21,17 +25,114 @@
 export default {
   data() {
     return {
+      scrollYPosition: null,
+      hashLinks: [],
       showMenu: false,
+      html: undefined,
+      body: undefined,
     };
   },
+  computed: {
+    viewportOffset() {
+      return 200;
+    },
+  },
+  watch: {
+    $route() {
+      this.showMenu = false;
+    },
+  },
   mounted() {
-    window.onscroll = function scrollFunction() {
+    window.onscroll = () => {
+      this.updateScroll();
+      this.updateNavLinkClass();
+
       if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
         document.getElementById('navbar').style.background = '#5e2a634b';
       } else {
         document.getElementById('navbar').style.background = 'transparent';
       }
     };
+
+    this.addSmoothScrollOnAnchorClick();
+  },
+  methods: {
+    updateScroll() {
+      this.scrollYPosition = window.scrollY;
+    },
+    updateNavLinkClass() {
+      for (let i = 0; i < this.hashLinks.length; i += 1) {
+        const element = document.querySelector(
+          `[ href="#${this.hashLinks[i]}" ]`,
+        );
+        if (this.isInViewport(this.hashLinks[i])) {
+          element.classList.add('active');
+        } else {
+          element.classList.remove('active');
+        }
+      }
+    },
+    isInViewport(id) {
+      const element = document.getElementById(id);
+      const bounding = element.getBoundingClientRect();
+      return (
+        bounding.top <= this.viewportOffset
+        && bounding.bottom >= this.viewportOffset
+        && bounding.left >= 0
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    },
+    scroll(from, to, hash) {
+      const timeInterval = 1; // in ms
+      let prevScrollTop;
+      const increment = to > from ? 20 : -20;
+      const scrollByPixel = setInterval(() => {
+        // getting current scroll position
+        const scrollTop = Math.round(this.body.scrollTop || this.html.scrollTop);
+        if (
+          prevScrollTop === scrollTop
+          || (to > from && scrollTop >= to)
+          || (to < from && scrollTop <= to)
+        ) {
+          clearInterval(scrollByPixel);
+          window.location.hash = hash; // Add hash to the url after scrolling
+        } else {
+          this.body.scrollTop += increment;
+          this.html.scrollTop += increment;
+          prevScrollTop = scrollTop;
+        }
+      }, timeInterval);
+    },
+    onAnchorClick(event, hash, hashElement) {
+      event.preventDefault(); // preventing default anchor click behavior
+      // getting current scroll position
+      const scrollTop = Math.round(this.body.scrollTop || this.html.scrollTop);
+      let hashElementTop = 0;
+      let obj = hashElement;
+
+      while (obj.offsetParent) {
+        hashElementTop += obj.offsetTop;
+        obj = obj.offsetParent;
+      }
+      hashElementTop = Math.round(hashElementTop); // getting element's position
+      this.scroll(scrollTop, hashElementTop, hash);
+    },
+    addSmoothScrollOnAnchorClick() {
+      const { links } = document;
+      this.html = document.documentElement;
+      this.body = document.body;
+
+      for (let i = 0; i < links.length; i += 1) {
+        const href = links[i].getAttribute('href');
+        const id = href.substring(1);
+        const hashElement = document.getElementById(id);
+
+        if (hashElement) {
+          this.hashLinks.push(id);
+          links[i].onclick = event => this.onAnchorClick(event, href, hashElement);
+        }
+      }
+    },
   },
 };
 </script>
@@ -41,7 +142,9 @@ export default {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-content: center;
   align-items: center;
+  padding: 0;
 }
 
 .navbar {
@@ -50,10 +153,11 @@ export default {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  align-content: center;
   width: 100%;
   position: absolute;
-  padding-top: 2rem;
+  z-index: 1000;
+  padding: 1rem 0;
 
   &_logo {
     margin-left: 2rem;
@@ -70,22 +174,33 @@ export default {
     background: rgba(183, 112, 216, 0.137);
     border-radius: 3px;
     padding: .3rem .6rem;
-    display: flex;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
   }
 
   & ul {
     display: none;
 
-    & li a {
-      display: flex;
-      justify-content: center;
-      color: white;
+    & li {
       font-weight: bold;
       border-top: 1px solid rgba(128, 128, 128, 0.281);
       padding-bottom: .5rem;
       padding-top: .5rem;
+      text-align: center;
 
-      &.active {
+      & a {
+        color: rgb(251, 206, 255);
+      }
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+
+      & a.active {
       color: #260b47;
       }
     }
@@ -97,8 +212,6 @@ export default {
     background: linear-gradient(to left top, #6017fb, #6b657a);
     border-right: 3px solid white;
     border-left: 3px solid white;
-    margin-top: 1rem;
-    padding: 0;
   }
 }
 
@@ -108,8 +221,6 @@ export default {
     height: 60px;
     flex-direction: row;
     background: none;
-    padding-top: 0;
-    z-index: 1000;
     left: 0;
     right: 0;
 
@@ -124,26 +235,33 @@ export default {
 
       &, ul.showMenu {
         display: flex;
+        border: 0;
       }
 
       & li {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        margin-right: 4rem;
+        border-top: none;
+
+        &:nth-last-of-type(1) {
+          margin-right: 4rem;
+        }
 
         & a {
           border: none;
-          margin-left: 1.5rem;
+          margin-left: 2.5rem;
           transition: all 0.3s ease 0s;
           border-bottom: 1px solid transparent;
-          animation-name: moveInLeft;
-          animation-duration: 1s;
-          animation-timing-function: ease-out;
 
           &:hover {
             color: #260b47;
             border-bottom: 1px solid #260b47;
+          }
+
+          &:focus {
+            border: none;
+            outline: none;
           }
 
           &.active {
