@@ -49,6 +49,7 @@
 
       <div class="button">
         <button type="submit" :disabled="loading || $v.$invalid">ENVIAR</button>
+        <Spinner class="margin-right" :loading="loading" />
       </div>
     </form>
 
@@ -63,10 +64,12 @@ import { required, email, maxLength } from 'vuelidate/lib/validators';
 import axios from '@/axios';
 import Modal from '@/components/Modal.vue';
 import validationMessages from '@/helpers/validationMessages';
+import Spinner from '@/components/Spinner.vue';
 
 export default {
   components: {
     Modal,
+    Spinner,
   },
   data() {
     return {
@@ -171,7 +174,6 @@ export default {
 .form-wrapper {
   display: flex;
   flex-direction: column;
-  // background: black;
   margin-top: 1rem;
 }
 
@@ -250,13 +252,18 @@ button {
 
 .button {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
 .feedback-error {
   color: red;
+}
+
+.margin-right {
+  margin-left: 3rem;
 }
 
         @media (min-width: 768px) {
