@@ -27,6 +27,11 @@ button {
 a {
   color: #fff;
   font-size: 1rem;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
 }
 
 .button_wrapper {
@@ -55,7 +60,7 @@ a {
 @media (min-width: 992px) {
   button {
     margin-top: 5rem;
-    transition: all.2s;
+    transition: all.3s;
 
     &:hover {
       transform: translateY(-8px);
