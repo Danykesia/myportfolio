@@ -14,7 +14,7 @@
       Como web designer, atuo com foco em <span class="bold">design responsivo</span>,
       usabilidade e na experiência do usuário.
     <p>
-      Já na área de desenvolvimento web, possuo experiência em frameworks JavaScrip, como VueJS.
+      Já na área de desenvolvimento web, possuo experiência em frameworks JavaScript, como VueJS.
     </p>
     <p>
       Além disso, trabalho com desenvolvimento de projetos em <span class="bold">WordPress</span>
