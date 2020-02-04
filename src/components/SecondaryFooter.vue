@@ -1,5 +1,5 @@
 <template>
-  <div class="container information">
+  <div class="information">
     <div class="information_local">
       <h1>LOCAL</h1>
       <p>Recife - Brasil</p>
@@ -24,7 +24,7 @@
     color: rgb(48, 46, 46);
 
     & h1 {
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
     }
   }
 
