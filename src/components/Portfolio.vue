@@ -51,7 +51,7 @@
           require('../assets/portfolioLaptop.png'),
           require('../assets/portfolioMobile.png'),
           'https://github.com/Danykesia/myportfolio',
-          'https://www.danykalmeida.com/myPortfolio',
+          'https://www.danykalmeida.com',
         )"/>
       </PortfolioCard>
     </div>
