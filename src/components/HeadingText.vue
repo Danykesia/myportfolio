@@ -48,6 +48,7 @@ h1 {
   font-weight: normal;
   font-size: 1.8rem;
   padding-top: 5rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -56,7 +57,7 @@ p {
   font-size: 1rem;
 
   &:first-of-type {
-    padding-top: 7rem;
+    padding-top: 6.5rem;
   }
 }
 
@@ -72,50 +73,49 @@ p {
   font-weight: bold;
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-h1 {
-  font-size: 2.2rem;
-}
-p {
-  &:first-of-type {
-    padding-top: 7.5rem;
+@media (min-width: 319px) and (max-width: 358px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    &:first-of-type {
+      padding-top: 4.8rem;
+    }
   }
 }
-}
 
-@media (min-width: 768px) and (min-width: 991px){
-h1 {
-  font-size: 3rem;
-}
-p {
-  font-size: 1.2rem;
-  margin-top: .7rem;
-
-  &:first-of-type {
-    padding-top: 8rem;
+@media (min-width: 500px) and (max-width: 991px) {
+  h1 {
+    font-size: 2.2rem;
   }
-}
+
+  p {
+    &:first-of-type {
+      padding-top: 7.8rem;
+    }
+  }
 }
 
 @media (min-width: 992px) {
-h1 {
-  margin-top: 4rem;
-}
+  h1 {
+    margin-top: 4rem;
+  }
 
-h3 {
-  margin-bottom: 3rem;
-  font-size: 1.6rem;
-  color: #f3ecec;
-}
+  h3 {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    color: #f3ecec;
+  }
 
-p {
-  &:first-of-type {
-    padding-top: 1rem;
+  p {
+    &:first-of-type {
+      padding-top: 1rem;
   }
 }
-.desktop {
-  display: flex;
-  justify-content: space-between;
-}
+  .desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 </style>

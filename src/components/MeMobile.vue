@@ -27,22 +27,6 @@ img {
   padding-top: 1rem;
 }
 
-@media (min-width: 576px) {
-  img {
-    width: 11rem;
-  }
-
-  h2{
-    font-size: 1.5rem;
-    margin-right: 3rem;
-    padding-left: 3rem;
-  }
-
-  .perfil_Mobile {
-    padding-top: 2rem;
-  }
-}
-
 @media (min-width: 992px) {
   .perfil_Mobile {
     display: none;
