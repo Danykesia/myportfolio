@@ -99,11 +99,13 @@ p {
 
 @media (min-width: 992px) {
   h1 {
-    margin-top: 4rem;
+    margin: 4rem 0 0 0;
+    font-size: 3rem;
+    text-align: center;
   }
 
   h3 {
-    margin-bottom: 3rem;
+    margin: 2rem 0 2rem 0;
     font-size: 1.6rem;
     color: #f3ecec;
   }
@@ -115,7 +117,11 @@ p {
 }
   .desktop {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    &_perfil {
+      text-align: center;
+    }
   }
 }
 </style>
