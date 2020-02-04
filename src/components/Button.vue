@@ -11,8 +11,8 @@ button {
   width: 12rem;
   text-align: center;
   background: rgb(217, 139, 253);
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   box-shadow: 4px 5px 13px 0px #080839;
   cursor: pointer;
   border-radius: 4px;
