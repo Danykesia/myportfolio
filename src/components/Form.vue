@@ -1,5 +1,5 @@
 <template>
-  <div class="form-wrapper container">
+  <div class="form-wrapper">
     <form @submit.prevent="submitForm()">
       <div class="name">
         <div class="col-1">
@@ -188,10 +188,6 @@ export default {
   margin-top: 1rem;
 }
 
-.col-2 {
-  width: 80%;
-}
-
 .subject {
   display: flex;
   flex-direction: column;
@@ -269,6 +265,10 @@ button {
         @media (min-width: 768px) {
           .container {
             padding-right: 0;
+          }
+
+          .col-2 {
+            width: 80%;
           }
         }
 </style>
