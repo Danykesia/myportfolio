@@ -163,6 +163,7 @@ export default {
     margin-left: 2rem;
     max-height: 40px;
     height: 25px;
+    display: flex;
   }
 
   &_toggle {
@@ -210,8 +211,6 @@ export default {
     display: block;
     width: 100%;
     background: linear-gradient(to left top, #6017fb, #6b657a);
-    border-right: 3px solid white;
-    border-left: 3px solid white;
   }
 }
 
@@ -223,6 +222,8 @@ export default {
     background: none;
     left: 0;
     right: 0;
+    max-width: 2000px;
+    margin: auto;
 
     &_logo {
       margin-left: 4rem;
