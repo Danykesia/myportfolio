@@ -1,23 +1,25 @@
 <template>
   <nav id="navbar" class="navbar">
-    <div class="toggle_mobile">
-      <a href="/"><img class="navbar_logo" src="../assets/DANIELE..png" alt="DANIELE"></a>
-      <button id="toggle" class="navbar_toggle" @click="showMenu = !showMenu">
-        <font-awesome-icon class="navbar_icon" icon="bars"/>
-      </button>
-    </div>
+    <div class="navbar_wrapper">
+      <div class="toggle_mobile">
+        <a href="/"><img class="navbar_logo" src="../assets/DANIELE..png" alt="DANIELE"></a>
+        <button id="toggle" class="navbar_toggle" @click="showMenu = !showMenu">
+          <font-awesome-icon class="navbar_icon" icon="bars"/>
+        </button>
+      </div>
 
-    <ul class="navbar_links" :class="{'showMenu': showMenu}">
-      <li>
-        <a href="#home" class="active">Home</a>
-      </li>
-      <li>
-        <a href="#portfolio">Portfolio</a>
-      </li>
-      <li>
-        <a href="#contato">Contato</a>
-      </li>
-    </ul>
+      <ul class="navbar_links" :class="{'showMenu': showMenu}">
+        <li>
+          <a href="#home" class="active">Home</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#contato">Contato</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </template>
 
@@ -157,7 +159,11 @@ export default {
   width: 100%;
   position: absolute;
   z-index: 1000;
-  padding: 1rem 0;
+
+  &_wrapper {
+    width: 100%;
+    max-width: 2000px;
+  }
 
   &_logo {
     margin-left: 2rem;
@@ -222,8 +228,14 @@ export default {
     background: none;
     left: 0;
     right: 0;
+
+    &_wrapper {
+    display: flex;
+    width: 100%;
     max-width: 2000px;
     margin: auto;
+  }
+
 
     &_logo {
       margin-left: 4rem;
