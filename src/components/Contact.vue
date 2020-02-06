@@ -1,12 +1,14 @@
 <template>
-  <section id="contato" class="contact">
-    <h3>Contato</h3>
-    <hr>
-    <p>
-      Que tal me falar sobre o seu projeto? Será um prazer ajudá-lo(a)!
-    </p>
-    <Form/>
-    <SecondaryFooter/>
+  <section id="contato">
+    <div class="contact">
+      <h3>Contato</h3>
+      <hr>
+      <p>
+        Que tal me falar sobre o seu projeto? Será um prazer ajudá-lo(a)!
+      </p>
+      <Form/>
+      <SecondaryFooter/>
+    </div>
   </section>
 </template>
 
@@ -42,8 +44,12 @@ p {
 
 #contato {
   background: linear-gradient(to left top,#6b657a,#6017fb,#0b0216);
-  width: 100%;
+}
+
+.contact {
+  // width: 100%;
   padding: 3rem;
-  max-width: 100%;
+  max-width: 2000px;
+  margin: auto;
 }
 </style>
