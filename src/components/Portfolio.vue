@@ -124,7 +124,7 @@ hr {
   padding-top: 1rem;
   width: 100%;
   background: white;
-  max-width: 100%;
+  max-width: 2000px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
