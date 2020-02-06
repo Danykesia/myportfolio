@@ -1,5 +1,5 @@
 <template>
-  <div class="information">
+  <div class="information container">
     <div class="information_local">
       <h1>LOCAL</h1>
       <p>Recife - Brasil</p>
@@ -16,7 +16,7 @@
 .information {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: white;
 
   &_local {
