@@ -48,11 +48,11 @@ li, a {
 }
 
         /*Extra large devices (large desktops, 1200px  e maiores)*/
-        @media (min-width: 992px) {
+        @media (min-width: 768px) {
           .container {
             max-width: 1920px;
-            padding-left: 3rem;
-            padding-right: 3rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
           }
         }
 </style>
