@@ -51,8 +51,8 @@ li, a {
         @media (min-width: 992px) {
           .container {
             max-width: 1920px;
-            padding-left: 4rem;
-            padding-right: 4rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
           }
         }
 </style>
