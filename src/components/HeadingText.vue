@@ -1,41 +1,25 @@
 <template>
-  <div class="desktop_perfil container">
-    <div class="desktop mobile">
-      <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
-      <MeDesktop/>
+  <div class="container text">
+    <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
+    <h3>Olá, meu nome é Daniele Késia!</h3>
+    <div>
+      <p>
+        Sou <span class="bold">Web Designer</span> e
+        <span class="bold">Desenvolvedora Web</span> (front-end).
+      </p>
+      <p>
+        Como web designer, atuo com foco em <span class="bold">design responsivo</span>,
+        usabilidade e na experiência do usuário.
+      <p>
+        Já na área de desenvolvimento web, possuo experiência em frameworks JavaScript, como VueJS.
+      </p>
+      <p>
+        Além disso, trabalho com desenvolvimento de projetos em <span class="bold">WordPress</span>
+        e <span class="bold">Elementor</span>.
+      </p>
     </div>
-    <h3 class="desktop">Olá, meu nome é Daniele Késia!</h3>
-    <MeMobile/>
-    <p>
-      Sou <span class="bold">Web Designer</span> e
-      <span class="bold">Desenvolvedora Web</span> (front-end).
-    </p>
-    <p>
-      Como web designer, atuo com foco em <span class="bold">design responsivo</span>,
-      usabilidade e na experiência do usuário.
-    <p>
-      Já na área de desenvolvimento web, possuo experiência em frameworks JavaScript, como VueJS.
-    </p>
-    <p>
-      Além disso, trabalho com desenvolvimento de projetos em <span class="bold">WordPress</span>
-      e <span class="bold">Elementor</span>.
-    </p>
   </div>
 </template>
-
-<script>
-import MeMobile from '@/components/MeMobile.vue';
-import MeDesktop from '@/components/MeDesktop.vue';
-
-export default {
-  name: 'home',
-  components: {
-    MeMobile,
-    MeDesktop,
-  },
-};
-</script>
-
 
 <style lang="scss" scoped>
 h1 {
@@ -46,9 +30,14 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: normal;
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   padding-top: 5rem;
-  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #f3ecec;
+  margin-top: 2rem;
+  font-size: 1.4rem;
 }
 
 p {
@@ -57,71 +46,42 @@ p {
   font-size: 1rem;
 
   &:first-of-type {
-    padding-top: 6.5rem;
+    padding-top: 2rem;
   }
 }
 
-.desktop {
-  display: none;
-}
-
-.mobile {
-  display: block;
+.text {
+  text-align: center;
 }
 
 .bold {
   font-weight: bold;
 }
 
-@media (min-width: 319px) and (max-width: 358px) {
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  p {
-    &:first-of-type {
-      padding-top: 4.8rem;
-    }
-  }
-}
-
 @media (min-width: 500px) and (max-width: 991px) {
   h1 {
-    font-size: 2.2rem;
-  }
-
-  p {
-    &:first-of-type {
-      padding-top: 7.8rem;
-    }
+    font-size: 2.8rem;
   }
 }
 
 @media (min-width: 992px) {
   h1 {
-    margin: 4rem 0 0 0;
-    font-size: 3rem;
-    text-align: center;
+    font-size: 3.5rem;
   }
 
   h3 {
-    margin: 2rem 0 2rem 0;
-    font-size: 1.6rem;
+    margin-top: 2rem;
+    font-size: 1.8rem;
     color: #f3ecec;
   }
 
   p {
+    text-align: center;
+    font-size: 1.2rem;
+
     &:first-of-type {
-      padding-top: 1rem;
+      padding-top: 2rem;
   }
 }
-  .desktop {
-    display: flex;
-    justify-content: space-evenly;
-
-    &_perfil {
-      text-align: center;
-    }
-  }
 }
 </style>
