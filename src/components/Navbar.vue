@@ -147,6 +147,7 @@ export default {
   align-content: center;
   align-items: center;
   padding: 0;
+  margin-top: 0.5rem;
 }
 
 .navbar {
@@ -176,11 +177,11 @@ export default {
     margin-right: 2rem;
     background: none;
     border: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: purple;
-    background: rgba(183, 112, 216, 0.137);
+    background: rgba(240, 235, 243, 0.137);
     border-radius: 3px;
-    padding: .3rem .6rem;
+    padding: .3rem .6rem .1rem .6rem;
 
     &:focus {
       outline: none;
