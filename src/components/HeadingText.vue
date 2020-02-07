@@ -2,6 +2,7 @@
   <div class="container text">
     <h1>Seja bem vindo(a) ao meu Portfolio.</h1>
     <h3>Olá, meu nome é Daniele Késia!</h3>
+    <hr>
     <div>
       <p>
         Sou <span class="bold">Web Designer</span> e
@@ -31,12 +32,13 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   font-size: 2.3rem;
-  padding-top: 5rem;
+  padding-top: 7rem;
 }
 
 h3 {
   color: #f3ecec;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 1.4rem;
 }
 
@@ -48,6 +50,11 @@ p {
   &:first-of-type {
     padding-top: 2rem;
   }
+}
+
+hr {
+  margin: auto;
+  width: 10rem;
 }
 
 .text {
@@ -66,18 +73,18 @@ p {
 
 @media (min-width: 992px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   h3 {
     margin-top: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #f3ecec;
   }
 
   p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     &:first-of-type {
       padding-top: 2rem;
