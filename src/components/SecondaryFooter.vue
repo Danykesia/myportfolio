@@ -5,7 +5,7 @@
       <p>Recife - Brasil</p>
     </div>
     <div>
-      <a href="https://github.com/Danykesia/" target="_blank" title="acessar Githug">
+      <a href="https://github.com/Danykesia/" target="_blank" title="acessar Github">
         <font-awesome-icon :icon="['fab', 'github']" class="information_social"/>
       </a>
     </div>
