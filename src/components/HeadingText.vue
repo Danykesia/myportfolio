@@ -32,7 +32,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-weight: normal;
   font-size: 2.3rem;
-  padding-top: 7rem;
+  padding-top: 4rem;
 }
 
 h3 {
