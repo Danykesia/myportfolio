@@ -9,8 +9,10 @@
   background: rgb(19, 0, 37);
   color: white;
   padding: 1rem;
-  // display: flex;
   text-align: center;
   font-size: .8rem;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
 }
 </style>

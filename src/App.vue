@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="h-100">
     <Navbar/>
     <router-view/>
     <Footer/>
@@ -21,8 +21,14 @@ export default {
 </script>
 
 <style lang="scss">
+.h-100 {
+  height: 100%;
+}
+
 #app {
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -34,10 +40,6 @@ export default {
 li, a {
   text-decoration: none;
   list-style: none;
-}
-
-.h-100 {
-  height: 100%;
 }
 
 .container {
