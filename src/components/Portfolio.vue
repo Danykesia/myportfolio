@@ -10,8 +10,8 @@
         <PopUp @click="displayModal(
           require('../assets/imobLaptop.png'),
           require('../assets/imobMobile.png'),
-          'https://github.com/Danykesia/imobiliaria-project',
           'https://www.danykalmeida.com/imobiProject',
+          'https://github.com/Danykesia/imobiliaria-project',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -20,8 +20,8 @@
         <PopUp @click="displayModal(
           require('../assets/lawyerLaptop.png'),
           require('../assets/lawyerMobile.png'),
-          'https://github.com/Danykesia/advocacia-project',
           'https://danykalmeida.com/advProject',
+          'https://github.com/Danykesia/advocacia-project',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -30,7 +30,6 @@
         <PopUp @click="displayModal(
           require('../assets/motionLaptop.png'),
           require('../assets/motionMobile.png'),
-          'https://github.com/Danykesia/motion-project',
           'https://www.danykalmeida.com/motionProject',
         )"/>
       </PortfolioCard>
@@ -40,7 +39,6 @@
         <PopUp @click="displayModal(
           require('../assets/workoutLaptop.png'),
           require('../assets/workoutMobile.png'),
-          'https://github.com/Danykesia/workout-project',
           'https://www.danykalmeida.com/workoutProject',
         )"/>
       </PortfolioCard>
@@ -50,10 +48,28 @@
         <PopUp @click="displayModal(
           require('../assets/portfolioLaptop.png'),
           require('../assets/portfolioMobile.png'),
-          'https://github.com/Danykesia/myportfolio',
           'https://www.danykalmeida.com',
+          'https://github.com/Danykesia/myportfolio',
         )"/>
       </PortfolioCard>
+      <PortfolioCard
+        :lapTopImgSrc="require('../assets/jusLaptop.png')"
+        :mobileImgSrc="require('../assets/jusMobile.png')">
+        <PopUp @click="displayModal(
+          require('../assets/jusLaptop.png'),
+          require('../assets/jusMobile.png'),
+          'https://www.danykalmeida.com/lawFirm',
+        )"/>
+      </PortfolioCard>
+      <!-- <PortfolioCard
+        :lapTopImgSrc="require('../assets/rjaLaptop.png')"
+        :mobileImgSrc="require('../assets/rjaMobile.png')">
+        <PopUp @click="displayModal(
+          require('../assets/rjaLaptop.png'),
+          require('../assets/rjaMobile.png'),
+          'https://www.danykalmeida.com/rjaAdvocacia',
+        )"/>
+      </PortfolioCard> -->
     </div>
 
     <Modal
@@ -91,7 +107,7 @@ export default {
     };
   },
   methods: {
-    displayModal(lapTopImgSrc, mobileImgSrc, linkCode, linkDemo) {
+    displayModal(lapTopImgSrc, mobileImgSrc, linkDemo, linkCode = '') {
       document.querySelector('body').style.overflow = 'hidden';
       this.showModal = true;
       this.lapTopImgSrc = lapTopImgSrc;

@@ -2,10 +2,11 @@
   <div class="portfolio_modal_content">
     <PortfolioCard :lapTopImgSrc="lapTopImgSrc" :mobileImgSrc="mobileImgSrc"/>
     <div class="btn">
-      <a :href="linkDemo" target="_blank" class="btn_demo">Ver demo
+      <a :href="linkDemo" target="_blank" class="btn_demo">
+        Ver demo {{linkCode?'': '(Wordpress)'}}
         <font-awesome-icon class="btn_iconInside" icon="eye"/>
       </a>
-      <a :href="linkCode" target="_blank" class="btn_code">Ver código
+      <a :href="linkCode" target="_blank" class="btn_code" v-if="linkCode">Ver código
         <font-awesome-icon class="btn_iconInside" icon="code"/>
       </a>
     </div>
@@ -23,8 +24,8 @@ export default {
     lapTopImgSrc: String,
     mobileImgSrc: String,
     show: Boolean,
-    linkCode: String,
     linkDemo: String,
+    linkCode: String,
   },
 };
 </script>
