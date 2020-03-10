@@ -61,15 +61,15 @@
           'https://www.danykalmeida.com/lawFirm',
         )"/>
       </PortfolioCard>
-      <!-- <PortfolioCard
+      <PortfolioCard
         :lapTopImgSrc="require('../assets/rjaLaptop.png')"
         :mobileImgSrc="require('../assets/rjaMobile.png')">
         <PopUp @click="displayModal(
           require('../assets/rjaLaptop.png'),
           require('../assets/rjaMobile.png'),
-          'https://www.danykalmeida.com/rjaAdvocacia',
+          'https://www.rjaadvocacia.com.br',
         )"/>
-      </PortfolioCard> -->
+      </PortfolioCard>
     </div>
 
     <Modal
