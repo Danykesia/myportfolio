@@ -68,6 +68,8 @@
           require('../assets/rjaLaptop.png'),
           require('../assets/rjaMobile.png'),
           'https://www.rjaadvocacia.com.br',
+          '',
+          'Ver site',
         )"/>
       </PortfolioCard>
     </div>
@@ -79,7 +81,9 @@
         :lapTopImgSrc="lapTopImgSrc"
         :mobileImgSrc="mobileImgSrc"
         :linkCode="linkCode"
-        :linkDemo="linkDemo"/>
+        :linkDemo="linkDemo"
+        :linkSite="linkSite"
+        :linkDemoText="linkDemoText"/>
     </Modal>
   </section>
 </template>
@@ -104,16 +108,18 @@ export default {
       mobileImgSrc: '',
       linkCode: '',
       linkDemo: '',
+      linkDemoText: '',
     };
   },
   methods: {
-    displayModal(lapTopImgSrc, mobileImgSrc, linkDemo, linkCode = '') {
+    displayModal(lapTopImgSrc, mobileImgSrc, linkDemo, linkCode = '', linkDemoText = '') {
       document.querySelector('body').style.overflow = 'hidden';
       this.showModal = true;
       this.lapTopImgSrc = lapTopImgSrc;
       this.mobileImgSrc = mobileImgSrc;
       this.linkCode = linkCode;
       this.linkDemo = linkDemo;
+      this.linkDemoText = linkDemoText;
     },
     closeModal() {
       document.querySelector('body').style.overflow = 'auto';

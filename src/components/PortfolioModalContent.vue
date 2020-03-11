@@ -3,7 +3,7 @@
     <PortfolioCard :lapTopImgSrc="lapTopImgSrc" :mobileImgSrc="mobileImgSrc"/>
     <div class="btn">
       <a :href="linkDemo" target="_blank" class="btn_demo">
-        Ver demo {{linkCode?'': '(Wordpress)'}}
+        {{linkDemoText}} {{linkCode?'': '(Wordpress)'}}
         <font-awesome-icon class="btn_iconInside" icon="eye"/>
       </a>
       <a :href="linkCode" target="_blank" class="btn_code" v-if="linkCode">Ver código
@@ -26,6 +26,10 @@ export default {
     show: Boolean,
     linkDemo: String,
     linkCode: String,
+    linkDemoText: {
+      type: String,
+      default: 'Ver demo',
+    },
   },
 };
 </script>
@@ -70,6 +74,25 @@ export default {
 
     &:hover {
       background-color: rgb(247, 109, 67);
+    }
+  }
+
+  &_site {
+    background-color: rgb(81, 153, 201);
+    border: none;
+    font-size: .8rem;
+    font-weight: bold;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #260b47;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: rgb(31, 147, 155);
     }
   }
 
