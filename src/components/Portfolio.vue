@@ -12,6 +12,7 @@
           require('../assets/imobMobile.png'),
           'https://www.danykalmeida.com/imobiProject',
           'https://github.com/Danykesia/imobiliaria-project',
+          'Ver demo',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -22,6 +23,7 @@
           require('../assets/lawyerMobile.png'),
           'https://danykalmeida.com/advProject',
           'https://github.com/Danykesia/advocacia-project',
+          'Ver demo',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -31,6 +33,8 @@
           require('../assets/motionLaptop.png'),
           require('../assets/motionMobile.png'),
           'https://www.danykalmeida.com/motionProject',
+          '',
+          'Ver demo',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -40,6 +44,8 @@
           require('../assets/workoutLaptop.png'),
           require('../assets/workoutMobile.png'),
           'https://www.danykalmeida.com/workoutProject',
+          '',
+          'Ver demo',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -50,6 +56,7 @@
           require('../assets/portfolioMobile.png'),
           'https://www.danykalmeida.com',
           'https://github.com/Danykesia/myportfolio',
+          'Ver site',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -59,6 +66,8 @@
           require('../assets/jusLaptop.png'),
           require('../assets/jusMobile.png'),
           'https://www.danykalmeida.com/lawFirm',
+          '',
+          'Ver demo',
         )"/>
       </PortfolioCard>
       <PortfolioCard
@@ -82,7 +91,6 @@
         :mobileImgSrc="mobileImgSrc"
         :linkCode="linkCode"
         :linkDemo="linkDemo"
-        :linkSite="linkSite"
         :linkDemoText="linkDemoText"/>
     </Modal>
   </section>

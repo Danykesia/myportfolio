@@ -28,7 +28,6 @@ export default {
     linkCode: String,
     linkDemoText: {
       type: String,
-      default: 'Ver demo',
     },
   },
 };
@@ -37,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 .btn {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   &_demo {
     background-color: rgb(81, 201, 81);
@@ -74,25 +73,6 @@ export default {
 
     &:hover {
       background-color: rgb(247, 109, 67);
-    }
-  }
-
-  &_site {
-    background-color: rgb(81, 153, 201);
-    border: none;
-    font-size: .8rem;
-    font-weight: bold;
-    padding: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #260b47;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: rgb(31, 147, 155);
     }
   }
 
